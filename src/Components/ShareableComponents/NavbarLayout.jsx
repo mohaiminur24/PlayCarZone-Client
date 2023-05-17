@@ -63,7 +63,7 @@ const NavbarLayout = () => {
         </ul>
       </div>
       <div className="navbar-end">
-            <NavLink><button className="px-5 py-2 font-extrabold bg-button rounded-md shadow-sm text-white text-pera hover:bg-buttonhover tracking-wide">Login</button></NavLink>
+            <NavLink to="/login"><button className="px-5 py-2 font-extrabold bg-button rounded-md shadow-sm text-white text-pera hover:bg-buttonhover tracking-wide">Login</button></NavLink>
       </div>
     </div>
   );
