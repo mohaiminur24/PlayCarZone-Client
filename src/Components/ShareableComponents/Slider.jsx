@@ -12,7 +12,6 @@ const Slider = () => {
             spaceBetween={50}
             slidesPerView={1}
             onSlideChange={true}
-            mousewheel={true}
             pagination={{
                 dynamicBullets: true
               }}
