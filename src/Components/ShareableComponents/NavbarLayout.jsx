@@ -27,18 +27,19 @@ const NavbarLayout = () => {
         <li>
             <NavLink to="/" className={({isActive})=> isActive && "text-main font-bold"}>Home</NavLink>
         </li>
-        {
-          user && <>
-          <li>
+        <li>
             <NavLink to="/alltoys" className={({isActive})=> isActive && "text-main font-bold"}>All Toys</NavLink>
         </li>
-        <li>
-            <NavLink to="/mytoys" className={({isActive})=> isActive && "text-main font-bold"}>My Toys</NavLink>
-        </li>
-        <li>
-            <NavLink to="/addtoy" className={({isActive})=> isActive && "text-main font-bold"}>Add A Toy</NavLink>
-        </li>
-          </>
+        {
+          user && <>
+        
+          <li>
+              <NavLink to="/mytoys" className={({isActive})=> isActive && "text-main font-bold"}>My Toys</NavLink>
+          </li>
+          <li>
+              <NavLink to="/addtoy" className={({isActive})=> isActive && "text-main font-bold"}>Add A Toy</NavLink>
+          </li>
+            </>
         }
         <li>
             <NavLink to="/blog" className={({isActive})=> isActive && "text-main font-bold"}>Blog</NavLink>
