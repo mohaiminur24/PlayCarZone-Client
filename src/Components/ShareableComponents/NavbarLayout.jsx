@@ -36,7 +36,7 @@ const NavbarLayout = () => {
             <NavLink to="/mytoys" className={({isActive})=> isActive && "text-main font-bold"}>My Toys</NavLink>
         </li>
         <li>
-            <NavLink to="/addtoys" className={({isActive})=> isActive && "text-main font-bold"}>Add A Toy</NavLink>
+            <NavLink to="/addtoy" className={({isActive})=> isActive && "text-main font-bold"}>Add A Toy</NavLink>
         </li>
           </>
         }

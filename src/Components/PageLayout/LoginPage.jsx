@@ -17,11 +17,13 @@ const LoginPage = () => {
         const password = form.password.value;
 
         handleloginuser(email,password).then(res=>{
+            form.reset();
             Swal.fire({
                 icon: 'success',
                 title: 'Success...',
                 text: 'Successfully Login user!',
               })
+              navigate('/');
         }).catch(error=>{
             setError(error.message);
         })

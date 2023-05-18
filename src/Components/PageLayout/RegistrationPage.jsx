@@ -27,6 +27,7 @@ const RegistrationPage = () => {
                 photoURL: photo
             });
             navigate("/");
+            form.reset();
 
             Swal.fire({
                 icon: 'success',

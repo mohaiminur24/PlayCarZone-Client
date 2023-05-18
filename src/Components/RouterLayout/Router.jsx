@@ -6,6 +6,7 @@ import RegistrationPage from "../PageLayout/RegistrationPage";
 import BlogPage from "../PageLayout/BlogPage";
 import ErrorPage from "../ShareableComponents/ErrorPage";
 import LoadingData from "../ShareableComponents/LoadingData";
+import AddNewToy from "../PageLayout/AddNewToy";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path: "/blog",
                 element: <BlogPage/>
+            },
+            {
+                path:'/addtoy',
+                element: <AddNewToy/>
             }
         ]
     },

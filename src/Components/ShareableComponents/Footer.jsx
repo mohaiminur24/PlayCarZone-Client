@@ -37,9 +37,9 @@ const Footer = () => {
                 <label className="label">
                     <span className="label-text">Enter your email address</span>
                 </label> 
-                <div className=" w-full flex flex-col gap-2 sm:gap-0 sm:flex-row justify-center items-center">
+                <div className=" w-3/4 flex flex-col gap-2 sm:gap-0 sm:flex-row justify-center items-center">
                     <input type="text" placeholder="username@site.com" className="outline-none w-4/5 px-3 py-2 border border-secound border-opacity-30 rounded-md sm:rounded-r-none"/> 
-                    <button className="bg-button h-full px-5 text-white  tracking-wide uppercase font-bold hover:bg-buttonhover sm:rounded-l-none py-2 border border-secound border-opacity-30 rounded-md">Subscribe</button>
+                    <button className="bg-button h-full px-3 text-white  tracking-wide font-bold hover:bg-buttonhover sm:rounded-l-none py-2 border border-secound border-opacity-30 rounded-md">Subscribe</button>
                 </div>
                 </div>
             </div>

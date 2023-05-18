@@ -23,7 +23,6 @@ const AuthConfigration = ({children}) => {
         return signOut(auth);
     };
 
-
     // login user function is here
     const handleloginuser = (email,pass)=>{
         return signInWithEmailAndPassword(auth, email, pass);
@@ -33,9 +32,6 @@ const AuthConfigration = ({children}) => {
     const handlegooglelogin =()=>{
         return signInWithPopup(auth,googleprovider);
     };
-
-
-
 
     // current user function is here
     useEffect(()=>{
@@ -48,8 +44,6 @@ const AuthConfigration = ({children}) => {
             return unsuscribe;
         }
     },[]);
-
-
 
     // Authcontext value is here
     const AuthValue ={
