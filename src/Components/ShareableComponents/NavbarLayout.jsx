@@ -1,15 +1,35 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../AuthConfigrationLayout/AuthConfigration";
 import { NavLink } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const NavbarLayout = () => {
-    const {user} = useContext(AuthContext);
+    const {user,loggedout} = useContext(AuthContext);
+
+
+    const loggedoutuser =()=>{
+      loggedout().then(res=>{
+        Swal.fire({
+          icon: 'success',
+          title: 'Successfully Done...',
+          text: 'User Logout successfully!',
+        });
+      }).catch(error=>{
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed...',
+          text: 'user Login out failed!',
+        })
+      })
+    }
 
     const navlink = <>
         <li>
             <NavLink to="/" className={({isActive})=> isActive && "text-main font-bold"}>Home</NavLink>
         </li>
-        <li>
+        {
+          user && <>
+          <li>
             <NavLink to="/alltoys" className={({isActive})=> isActive && "text-main font-bold"}>All Toys</NavLink>
         </li>
         <li>
@@ -18,6 +38,8 @@ const NavbarLayout = () => {
         <li>
             <NavLink to="/addtoys" className={({isActive})=> isActive && "text-main font-bold"}>Add A Toy</NavLink>
         </li>
+          </>
+        }
         <li>
             <NavLink to="/blog" className={({isActive})=> isActive && "text-main font-bold"}>Blog</NavLink>
         </li>
@@ -64,7 +86,9 @@ const NavbarLayout = () => {
           </ul>
         </div>
         <div className="navbar-end">
-              <NavLink to="/login"><button className="px-5 py-2 font-extrabold bg-button rounded-md shadow-sm text-white text-pera hover:bg-buttonhover tracking-wide">Login</button></NavLink>
+              {
+                user ? <div className="flex gap-3"><img title={user?.displayName} className="w-10 h-10 rounded-md shadow-md" src={user?.photoURL} alt="" /><button className="px-3 py-2 bg-button rounded-md shadow-md uppercase font-bold text-white hover:bg-buttonhover" onClick={loggedoutuser}>Logout</button></div> : <NavLink to="/login"><button className="px-5 py-2 font-extrabold bg-button rounded-md shadow-sm text-white text-pera hover:bg-buttonhover tracking-wide">Login</button></NavLink>
+              }
         </div>
       </div>
     </div>
