@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LoadingData from '../LoadingData';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const ToysDetails = () => {
     const [toydetails, setToyDeatils] = useState(null);
@@ -30,7 +32,13 @@ const ToysDetails = () => {
                 <h2><span className='text-main font-semibold'>Seller Email: </span><span className='text-sm ml-2'>{selleremail}</span></h2>
                 <h2><span className='text-main font-semibold'>Seller: </span><span className='text-sm ml-2'>{sellername}</span></h2>
                 <h2><span className='text-main font-semibold'>Catagory:</span><span className='text-sm ml-2'>{catagory}</span></h2>
-                <h2><span className='text-main font-semibold'>Rating:</span><span className='text-sm ml-2'>{rating}</span></h2>
+                <h2 className='flex items-center gap-2'><span className='text-main font-semibold'>Rating:</span>
+                <Rating
+                style={{ maxWidth: 100 }}
+                value={rating}
+                readOnly={true}
+                />
+                <span className='text-sm'>({rating})</span></h2>
                 <h2><span className='text-main font-semibold'>Quantity: </span><span className='text-sm ml-2'>{quantity}</span></h2>
                 <h2><span className='text-main font-semibold'>Price: </span><span className='text-sm ml-2'>{price}</span></h2>
                 <p className='text-sm mt-2'>{description}</p>
