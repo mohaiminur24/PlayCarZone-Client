@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Subcatagorydata = ({data}) => {
     console.log(data);
@@ -9,7 +10,9 @@ const Subcatagorydata = ({data}) => {
             <h1 className='font-bold text-lg'>{name}</h1>
             <h1 className='text-sm'><span>Rating:</span>{rating}</h1>
             <h2 className='text-sm'><span>Price: </span><span>${price}</span></h2>
+            <NavLink to={`/toydetails/${_id}`}>
             <button className='px-5 py-2 bg-button rounded-md font-bold text-white mt-3 hover:bg-buttonhover'>View Details</button>
+            </NavLink>
         </div>
     );
 };

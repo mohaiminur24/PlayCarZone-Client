@@ -6,6 +6,7 @@ import RegistrationPage from "../PageLayout/RegistrationPage";
 import BlogPage from "../PageLayout/BlogPage";
 import ErrorPage from "../ShareableComponents/ErrorPage";
 import AddNewToy from "../PageLayout/AddNewToy";
+import ToysDetails from "../ShareableComponents/Homepagecomponent/ToysDetails";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path:'/addtoy',
                 element: <AddNewToy/>
+            },
+            {
+                path:"/toydetails/:id",
+                element: <ToysDetails/>
             }
         ]
     },
