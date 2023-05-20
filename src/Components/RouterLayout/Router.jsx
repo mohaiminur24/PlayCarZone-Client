@@ -8,6 +8,8 @@ import ErrorPage from "../ShareableComponents/ErrorPage";
 import AddNewToy from "../PageLayout/AddNewToy";
 import ToysDetails from "../ShareableComponents/Homepagecomponent/ToysDetails";
 import AlltoysPage from "../PageLayout/AlltoysPage";
+import UpdateToys from "../ShareableComponents/UpdateToys";
+import MyToysPage from "../PageLayout/MyToysPage";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
             {
                 path:'/alltoys',
                 element: <AlltoysPage/>
+            },
+            {
+                path: '/updateroute/:id',
+                element: <UpdateToys/>
+            },
+            {
+                path: "mytoys",
+                element: <MyToysPage/>
             }
         ]
     },

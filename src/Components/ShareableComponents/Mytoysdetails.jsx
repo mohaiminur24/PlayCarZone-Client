@@ -1,8 +1,12 @@
 import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BiEdit,BiTrash } from "react-icons/bi";
 
-const SingleToy = ({toys}) => {
+
+const Mytoysdetails = ({toys, deletetoy}) => {
+
+    
 
     return (
         <>
@@ -17,6 +21,7 @@ const SingleToy = ({toys}) => {
                     <div>
                     <div className="font-bold text-lg">{toys.name}</div>
                     <div className="text-sm opacity-50">Seller: {toys.sellername}</div>
+                    <div className="text-sm opacity-50">Seller Email: {toys.selleremail}</div>
                     </div>
                 </div>
                 </td>
@@ -36,13 +41,17 @@ const SingleToy = ({toys}) => {
                 </td>
                 
                 <th>
-                    <NavLink to={`/toydetails/${toys._id}`}>
-                        <button className="px-5 py-2 bg-button rounded-md text-white shadow-md">Details</button>
+                    
+                    <button onClick={()=>deletetoy(toys._id)} className="px-5 py-2 mr-3 bg-[red] rounded-md text-white shadow-md" title='Delete'><BiTrash/></button>
+                        
+                    <NavLink to={`/updateroute/${toys._id}`}>
+                        <button className="px-5 py-2 bg-button rounded-md text-white shadow-md" title='Update'><BiEdit/></button>
                     </NavLink>
+                    
                 </th>
             </tr>
         </>
     );
 };
 
-export default SingleToy;
+export default Mytoysdetails;

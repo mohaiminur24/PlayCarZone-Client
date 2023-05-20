@@ -4,13 +4,13 @@ import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
 const Footer = () => {
     return (
         <div className='bg-base-200 bg-opacity-30'>
-            <footer className="footer p-10 text-base-content">
+            <footer className="footer sm:p-10 p-5 text-base-content">
                 <div>
                     <div className="flex justify-center items-center gap-2">
-                    <img className="w-10" src="https://images.freeimages.com/fic/images/icons/2018/business_icons_for/256/car_repair.png" alt="" />
-                    <h1 className="font-header font-bold text-lg">PlayCar<span className="text-button">Zone</span></h1>
-                </div>
-                <p>PlayCarZone.com<br/>Level-4, 34, Awal Centre, Banani, Dhaka <br /> Support: web@programming-hero.com</p>
+                        <img className="w-10" src="https://images.freeimages.com/fic/images/icons/2018/business_icons_for/256/car_repair.png" alt="" />
+                        <h1 className="font-header font-bold text-lg">PlayCar<span className="text-button">Zone</span></h1>
+                    </div>
+                 <p>PlayCarZone.com<br/>Level-4, 34, Awal Centre, Banani, Dhaka <br /> Support: web@programming-hero.com</p>
                 </div> 
                 <div>
                     <span className="footer-title">Services</span> 
@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
             </footer>
-            <h1 className='text-center text-sm pb-5 mx-5'>All Right reserved by <a className='font-para font-semibold underline text-main' href="https://www.linkedin.com/in/font-end-website-developer/">MD MohaiMinur rahman mukta</a></h1>
+            <h1 className='text-center text-xs pb-5 mx-5'>All Right reserved by <a className='font-para underline text-main' href="https://www.linkedin.com/in/font-end-website-developer/">MD MohaiMinur rahman mukta</a></h1>
         </div>
     );
 };

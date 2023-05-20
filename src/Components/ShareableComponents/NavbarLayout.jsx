@@ -76,8 +76,8 @@ const NavbarLayout = () => {
           </div>
           
           <div className="flex justify-center items-center gap-2">
-              <img className="w-10" src="https://images.freeimages.com/fic/images/icons/2018/business_icons_for/256/car_repair.png" alt="" />
-              <h1 className="font-header font-bold text-lg">PlayCar<span className="text-button">Zone</span></h1>
+              <img className="sm:w-10 w-6" src="https://images.freeimages.com/fic/images/icons/2018/business_icons_for/256/car_repair.png" alt="" />
+              <h1 className="font-header font-bold sm:text-lg text-sm">PlayCar<span className="text-button">Zone</span></h1>
           </div>
 
         </div>
@@ -88,7 +88,7 @@ const NavbarLayout = () => {
         </div>
         <div className="navbar-end">
               {
-                user ? <div className="flex gap-3"><img title={user?.displayName} className="w-10 h-10 rounded-md shadow-md" src={user?.photoURL} alt="" /><button className="px-3 py-2 bg-button rounded-md shadow-md uppercase font-bold text-white hover:bg-buttonhover" onClick={loggedoutuser}>Logout</button></div> : <NavLink to="/login"><button className="px-5 py-2 font-extrabold bg-button rounded-md shadow-sm text-white text-pera hover:bg-buttonhover tracking-wide">Login</button></NavLink>
+                user ? <div className="flex gap-3"><img title={user?.displayName} className="w-10 h-10 rounded-md shadow-md hidden sm:block" src={user?.photoURL} alt="" /><button className="sm:px-3 px-2 py-2 bg-button rounded-md shadow-md sm:uppercase font-bold text-white hover:bg-buttonhover" onClick={loggedoutuser}>Logout</button></div> : <NavLink to="/login"><button className="px-5 py-2 font-extrabold bg-button rounded-md shadow-sm text-white text-pera hover:bg-buttonhover tracking-wide">Login</button></NavLink>
               }
         </div>
       </div>
