@@ -13,10 +13,13 @@ const UpdateToys = () => {
     if(!data){
         return <LoadingData/>;
     };
-    console.log(data);
-    const {} = data;
+
+    const {price,quantity,description} = data;
     return (
         <div>
+            <h1 className='font-header text-2xl font-bold text-main'>Update your Toy Detatils</h1>
+
+            
             
         </div>
     );
