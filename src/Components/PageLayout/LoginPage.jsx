@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { BiError } from "react-icons/bi";
 import LoginWithGoogle from '../ShareableComponents/LoginWithGoogle';
 import { AuthContext } from '../AuthConfigrationLayout/AuthConfigration';
@@ -9,6 +9,8 @@ const LoginPage = () => {
     const [error, setError] = useState(null);
     const {handleloginuser} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || "/";
 
     const loginuser = event =>{
         event.preventDefault();
@@ -23,7 +25,7 @@ const LoginPage = () => {
                 title: 'Success...',
                 text: 'Successfully Login user!',
               })
-              navigate('/');
+              navigate(from);
         }).catch(error=>{
             setError(error.message);
         })

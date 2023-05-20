@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../AuthConfigrationLayout/AuthConfigration';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
 const LoginWithGoogle = () => {
     const {handlegooglelogin} = useContext(AuthContext);
     const navigation = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || "/";
     const googleLogin =()=>{
         handlegooglelogin().then(res=>{
             Swal.fire({
@@ -15,13 +17,15 @@ const LoginWithGoogle = () => {
                 title: 'Successfully Done...',
                 text: 'Login with google successfully!',
               })
-              navigation('/');
+              navigation(from);
         }).catch(error=>{
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Something went wrong!',
               })
+
+              console.log(error.message);
         })
     }
     return (

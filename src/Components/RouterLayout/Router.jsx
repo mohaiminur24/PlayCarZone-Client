@@ -10,6 +10,7 @@ import ToysDetails from "../ShareableComponents/Homepagecomponent/ToysDetails";
 import AlltoysPage from "../PageLayout/AlltoysPage";
 import UpdateToys from "../ShareableComponents/UpdateToys";
 import MyToysPage from "../PageLayout/MyToysPage";
+import PrivateRoute from "../AuthConfigrationLayout/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +28,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'/addtoy',
-                element: <AddNewToy/>
+                element: <PrivateRoute><AddNewToy/></PrivateRoute>
             },
             {
                 path:"/toydetails/:id",
-                element: <ToysDetails/>
+                element: <PrivateRoute><ToysDetails/></PrivateRoute>
             },
             {
                 path:'/alltoys',
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/updateroute/:id',
-                element: <UpdateToys/>
+                element: <PrivateRoute><UpdateToys/></PrivateRoute>
             },
             {
                 path: "mytoys",
-                element: <MyToysPage/>
+                element: <PrivateRoute><MyToysPage/></PrivateRoute>
             }
         ]
     },

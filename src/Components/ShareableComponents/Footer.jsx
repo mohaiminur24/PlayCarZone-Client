@@ -10,7 +10,7 @@ const Footer = () => {
                         <img className="w-10" src="https://images.freeimages.com/fic/images/icons/2018/business_icons_for/256/car_repair.png" alt="" />
                         <h1 className="font-header font-bold text-lg">PlayCar<span className="text-button">Zone</span></h1>
                     </div>
-                 <p>PlayCarZone.com<br/>Level-4, 34, Awal Centre, Banani, Dhaka <br /> Support: web@programming-hero.com</p>
+                 <p>PlayCarZone.com<br/>Level-4, 34, Awal Centre, Banani, Dhaka <br /> Contact: web@programming-hero.com</p>
                 </div> 
                 <div>
                     <span className="footer-title">Services</span> 
@@ -21,10 +21,10 @@ const Footer = () => {
                 </div> 
                 <div>
                     <span className="footer-title">Company</span> 
-                    <a className="link link-hover">About us</a> 
-                    <a className="link link-hover">Contact</a> 
-                    <a className="link link-hover">Jobs</a> 
-                    <a className="link link-hover">Press kit</a>
+                    <a className="link link-hover">Home</a> 
+                    <a className="link link-hover">All Toys</a> 
+                    <a className="link link-hover">My Toys</a> 
+                    <a className="link link-hover">Blog</a>
                 </div> 
                 <div>
                 <span className="footer-title">Newsletter</span>

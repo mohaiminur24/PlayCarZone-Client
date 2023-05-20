@@ -25,11 +25,13 @@ const AuthConfigration = ({children}) => {
 
     // login user function is here
     const handleloginuser = (email,pass)=>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, pass);
     };
 
     // user login with google function is here
     const handlegooglelogin =()=>{
+        setLoading(true);
         return signInWithPopup(auth,googleprovider);
     };
 
