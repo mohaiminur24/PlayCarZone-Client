@@ -95,7 +95,7 @@ const MyToysPage = () => {
                     Swal.fire({
                         position: 'center',
                         icon: 'error',
-                        title: 'Something went wrong try again!',
+                        title: 'Before update Change Something!',
                         showConfirmButton: false,
                         timer: 1500
                       })

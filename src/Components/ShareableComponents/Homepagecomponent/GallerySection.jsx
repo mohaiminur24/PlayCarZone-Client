@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import LoadingData from '../LoadingData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const GallerySection = () => {
     const [toyimg, setToyimg] = useState(null);
@@ -23,28 +26,28 @@ const GallerySection = () => {
             </div>
 
             <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 my-10'>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[0]?.thumbnail} alt="" />
                 </div>
-                <div className='grid grid-cols-2 gap-2'>
+                <div className='grid grid-cols-2 gap-2' data-aos="zoom-in-down" data-aos-delay="100">
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[1]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[2]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[3]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[4]?.thumbnail} alt="" />
                 </div>
-                <div>
+                <div data-aos="zoom-in-left" data-aos-delay="100">
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[10]?.thumbnail} alt="" />
                 </div>
-                <div className='grid grid-cols-2 gap-2'>
+                <div className='grid grid-cols-2 gap-2' data-aos="fade-right" data-aos-delay="100">
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[5]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[6]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[7]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[8]?.thumbnail} alt="" />
                 </div>
-                <div>
+                <div data-aos="flip-left" data-aos-delay="100">
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[9]?.thumbnail} alt="" />
                 </div>
-                <div className='grid grid-cols-2 gap-2'>
+                <div className='grid grid-cols-2 gap-2' data-aos="fade-left" data-aos-delay="100">
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[11]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[12]?.thumbnail} alt="" />
                     <img className='shadow-md p-3 w-full h-full hover:scale-105 duration-200' src={toyimg[13]?.thumbnail} alt="" />
