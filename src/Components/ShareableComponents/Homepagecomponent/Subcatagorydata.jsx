@@ -4,7 +4,6 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 
 const Subcatagorydata = ({data}) => {
-    console.log(data);
     const {thumbnail,name,price,rating,_id} =data;
     return (
         <div className='shadow-md p-5 rounded-md font-para'>

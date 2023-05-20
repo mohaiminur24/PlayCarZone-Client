@@ -5,6 +5,7 @@ import LoginWithGoogle from '../ShareableComponents/LoginWithGoogle';
 import { AuthContext } from '../AuthConfigrationLayout/AuthConfigration';
 import { updateProfile } from 'firebase/auth';
 import Swal from 'sweetalert2';
+import PageTitle from '../PageTitle';
 
 const RegistrationPage = () => {
     const [error, setError] = useState(null);
@@ -46,6 +47,7 @@ const RegistrationPage = () => {
 
     return (
         <div className='w-full h-screen grid grid-cols-1 md:grid-cols-2 gap-5 justify-center items-center'>
+            <PageTitle>Registraiton</PageTitle>
             <img className='w-3/5 mx-auto' src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1030,h_896/https://lisstech.com/wp-content/uploads/2020/07/Contact-1030x896.png" alt="" />
             <div className='p-5 w-4/5 mx-auto md:ml-0'>
                 <form onSubmit={Createuser}>

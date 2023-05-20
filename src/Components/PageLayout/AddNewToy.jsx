@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../AuthConfigrationLayout/AuthConfigration';
 import Swal from 'sweetalert2';
+import PageTitle from '../PageTitle';
 
 const AddNewToy = () => {
     const {user} = useContext(AuthContext);
@@ -45,6 +46,7 @@ const AddNewToy = () => {
 
     return (
         <div className='my-10 grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5'>
+            <PageTitle>Add Toy</PageTitle>
             <img className='w-4/5 mx-auto' src="https://www.clipartmax.com/png/full/231-2316780_free-pick-up-toys-clipart-download-free-clip-art-free-clean-car.png" alt="" />
             <div className='p-10 shadow-md rounded-md'>
                 <form onSubmit={addnewtoy}>

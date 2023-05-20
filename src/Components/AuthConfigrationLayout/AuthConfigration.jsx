@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import {GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth"
 import app from '../FirebaseConfigrationLayout/FirebaseConfig';
+import {Helmet} from "react-helmet";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -9,7 +10,6 @@ const googleprovider = new GoogleAuthProvider();
 const AuthConfigration = ({children}) => {
     const [user, setUser] = useState("no user");
     const [loading, setLoading] = useState(true);
-
 
     // Registration user function is here
     const handlecreatenewuser = (email, pass)=>{
@@ -54,7 +54,7 @@ const AuthConfigration = ({children}) => {
         handlecreatenewuser,
         loggedout,
         handleloginuser,
-        handlegooglelogin
+        handlegooglelogin,
     };
 
     return (

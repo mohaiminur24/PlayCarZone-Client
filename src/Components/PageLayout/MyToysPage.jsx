@@ -4,6 +4,7 @@ import LoadingData from '../ShareableComponents/LoadingData';
 import Mytoysdetails from '../ShareableComponents/Mytoysdetails';
 import Swal from 'sweetalert2';
 import { RxCross2 } from "react-icons/rx";
+import PageTitle from '../PageTitle';
 
 const MyToysPage = () => {
     const {user} = useContext(AuthContext);
@@ -107,6 +108,7 @@ const MyToysPage = () => {
 
     return (
         <div className='my-10'>
+            <PageTitle>My Toy</PageTitle>
         <h1 className='font-para font-bold text-sm border-b border-secound border-opacity-10 pb-2'>Total Toys: <span className='font-normal'>{mytoys.length}</span></h1>
 
         <div className='w-full overflow-x-auto'>

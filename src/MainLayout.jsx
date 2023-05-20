@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from './Components/ShareableComponents/Footer';
 
 const MainLayout = () => {
+
     return (
         <div>
             <NavbarLayout/>
