@@ -5,7 +5,7 @@ import PageTitle from '../PageTitle';
 
 const AlltoysPage = () => {
     const [toys, setToys] = useState(null);
-    const [searchText , setSearchText] = useState(null);
+    
     useEffect(()=>{
             fetch('http://localhost:5000/alltoysdata').then(res=>res.json())
             .then(data=> setToys(data));
@@ -18,8 +18,8 @@ const AlltoysPage = () => {
     const searchtoys = event =>{
         event.preventDefault();
         const searchtext = event.target.search.value;
-        setSearchText(searchtext);
-        event.target.reset();
+        fetch(`http://localhost:5000/searchalltoys/${searchtext}`).then(res=> res.json())
+        .then(data=>setToys(data));
     };
 
     return (
