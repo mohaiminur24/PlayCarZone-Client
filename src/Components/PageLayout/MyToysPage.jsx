@@ -13,16 +13,17 @@ const MyToysPage = () => {
     const [dataloadtoggle, setdatatoggle] = useState(false);
     const [recentupdate, setRecentUpdate] = useState(null);
     const [modal, setmodal] = useState(null);
+    const [sorting, setSorting] = useState('assending');
+
 
     const openmodal = ()=>{
         setmodal(true);
     };
 
-    
         useEffect(()=>{
-            fetch(`http://localhost:5000/mytoysdata?email=${user.email}`).then(res=>res.json())
+            fetch(`http://localhost:5000/mytoysdata?email=${user.email}&sorting=${sorting}`).then(res=>res.json())
             .then(data=> setMytoys(data));
-        },[user,dataloadtoggle]);
+        },[sorting,user,dataloadtoggle]);
 
     if(!mytoys){
         return <LoadingData/>;
@@ -55,8 +56,7 @@ const MyToysPage = () => {
                     };
                 });
             }
-          })
-        
+          })  
     };
 
     const updatefunction =(id)=>{
@@ -101,15 +101,22 @@ const MyToysPage = () => {
                       })
                 }
             });
-
-
         form.reset();
     }
 
     return (
         <div className='my-10'>
-            <PageTitle>My Toy</PageTitle>
-        <h1 className='font-para font-bold text-sm border-b border-secound border-opacity-10 pb-2'>Total Toys: <span className='font-normal'>{mytoys.length}</span></h1>
+            <PageTitle>My Toys</PageTitle>
+            <div className='border-b border-secound border-opacity-10 pb-2 flex items-center justify-between'>
+                <h1 className='font-para font-bold text-sm'>Total Toys: <span className='font-normal'>{mytoys.length}</span></h1>
+                <div>
+                    <label className='mr-5 font-para font-bold text-lg text-main' >Sorting</label>
+                    <select onChange={(e)=>{setSorting(e.target.value)}} className='border px-3 py-1 text-sm border-secound border-opacity-20 rounded-md shadow-md outline-none font-header' name='sorting'>
+                        <option value="assending">Ascending</option>
+                        <option value="descending ">Descending </option>
+                    </select>
+                </div>
+            </div>
 
         <div className='w-full overflow-x-auto'>
             <table className="table w-full">
