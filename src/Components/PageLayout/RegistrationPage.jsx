@@ -20,6 +20,17 @@ const RegistrationPage = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        if(!name || !photo || !email || !password){
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Failed...',
+                text: 'Must filup all input first!',
+              })
+
+              return;
+        }
+
         handlecreatenewuser(email,password)
         .then(res=>{
             const user = res.user;
@@ -73,7 +84,7 @@ const RegistrationPage = () => {
                         error && <span className='text-sm text-button flex gap-2 items-center'><BiError/>{error}</span>
                     }
 
-                    <input className='px-5 py-2 font-bold text-white bg-button rounded-md shadow-sm hover:bg-buttonhover block mt-5' type="submit" value="Login" />
+                    <input className='px-5 py-2 font-bold text-white bg-button rounded-md shadow-sm hover:bg-buttonhover block mt-5' type="submit" value="Registration" />
 
                     <h1 className='mt-5 text-sm'>ALready i have an account! <NavLink to="/login"><button className='font-bold text-main underline'>Login Account</button></NavLink></h1>
 
