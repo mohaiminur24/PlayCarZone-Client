@@ -4,6 +4,7 @@ import GallerySection from '../ShareableComponents/Homepagecomponent/GallerySect
 import Subcatagorysection from '../ShareableComponents/Homepagecomponent/Subcatagorysection';
 import PageTitle from '../PageTitle';
 import Discountsection from '../ShareableComponents/Homepagecomponent/Discountsection';
+import Contactinfo from '../ShareableComponents/Homepagecomponent/Contactinfo';
 
 const HomePage = () => {
     
@@ -14,7 +15,7 @@ const HomePage = () => {
             <GallerySection/>
             <Subcatagorysection/>
             <Discountsection/>
-            
+            <Contactinfo/>  
         </div>
     );
 };
