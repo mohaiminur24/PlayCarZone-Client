@@ -26,8 +26,8 @@ const AddNewToy = () => {
                 title: 'Empty',
                 text: 'Must put your all Document!',
               })
-              return;
-        }
+            return;
+        };
 
         fetch("http://localhost:5000/inserttoy",{
                 method: "POST",
