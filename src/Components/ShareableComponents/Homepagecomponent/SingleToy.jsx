@@ -22,7 +22,7 @@ const SingleToy = ({toys}) => {
                 </td>
                 <td>
                 <span className='flex gap-2 items-center'>
-                    <span className='font-bold'>toys.Rating :</span>
+                    <span className='font-bold'>Rating :</span>
                     <Rating
                     style={{ maxWidth: 80 }}
                     value={toys.rating}
