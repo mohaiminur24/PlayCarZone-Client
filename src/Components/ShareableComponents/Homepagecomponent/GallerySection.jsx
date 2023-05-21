@@ -8,7 +8,7 @@ const GallerySection = () => {
     const [toyimg, setToyimg] = useState(null);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/galleryimg").then(res=>res.json())
+        fetch("https://playcarzone-server.vercel.app/galleryimg").then(res=>res.json())
         .then(data=>{
             setToyimg(data);
         })

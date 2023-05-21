@@ -7,7 +7,7 @@ const AlltoysPage = () => {
     const [toys, setToys] = useState(null);
     
     useEffect(()=>{
-            fetch('http://localhost:5000/alltoysdata').then(res=>res.json())
+            fetch('https://playcarzone-server.vercel.app/alltoysdata').then(res=>res.json())
             .then(data=> setToys(data));
     },[]);
 
@@ -18,7 +18,7 @@ const AlltoysPage = () => {
     const searchtoys = event =>{
         event.preventDefault();
         const searchtext = event.target.search.value;
-        fetch(`http://localhost:5000/searchalltoys/${searchtext}`).then(res=> res.json())
+        fetch(`https://playcarzone-server.vercel.app/searchalltoys/${searchtext}`).then(res=> res.json())
         .then(data=>setToys(data));
     };
 

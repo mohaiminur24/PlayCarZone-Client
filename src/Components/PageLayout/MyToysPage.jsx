@@ -21,7 +21,7 @@ const MyToysPage = () => {
     };
 
         useEffect(()=>{
-            fetch(`http://localhost:5000/mytoysdata?email=${user.email}&sorting=${sorting}`).then(res=>res.json())
+            fetch(`https://playcarzone-server.vercel.app/mytoysdata?email=${user.email}&sorting=${sorting}`).then(res=>res.json())
             .then(data=> setMytoys(data));
         },[sorting,user,dataloadtoggle]);
 
@@ -41,7 +41,7 @@ const MyToysPage = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/deletetoy/${id}`,{
+                fetch(`https://playcarzone-server.vercel.app/deletetoy/${id}`,{
                     method: "DELETE",
                 }).then(res=> res.json())
                 .then(data=>{
@@ -60,7 +60,7 @@ const MyToysPage = () => {
     };
 
     const updatefunction =(id)=>{
-        fetch(`http://localhost:5000/singletoydeatils/${id}`).then(res=> res.json())
+        fetch(`https://playcarzone-server.vercel.app/singletoydeatils/${id}`).then(res=> res.json())
         .then(data=> setupdate(data));
     };
 
@@ -72,7 +72,7 @@ const MyToysPage = () => {
         const description = form.description.value;
         const object = {price,quantity,description};
         
-            fetch(`http://localhost:5000/updatetoy/${update._id}`,{
+            fetch(`https://playcarzone-server.vercel.app/updatetoy/${update._id}`,{
                 method: "POST",
                 headers: {
                     "content-type" : "application/json"

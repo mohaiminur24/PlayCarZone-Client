@@ -10,7 +10,7 @@ const ToysDetails = () => {
 
     if(id){
         useEffect(()=>{
-            fetch(`http://localhost:5000/singletoydeatils/${id}`).then(res=> res.json())
+            fetch(`https://playcarzone-server.vercel.app/singletoydeatils/${id}`).then(res=> res.json())
             .then(data=>{
                 setToyDeatils(data);
             });

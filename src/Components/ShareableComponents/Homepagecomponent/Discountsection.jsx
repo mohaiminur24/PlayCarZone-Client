@@ -15,7 +15,7 @@ const Discountsection = () => {
     const [discounttoy, setDiscounttoy] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/discounttoy').then(res=>res.json())
+        fetch('https://playcarzone-server.vercel.app/discounttoy').then(res=>res.json())
         .then(data=> setDiscounttoy(data));
     },[]);
 

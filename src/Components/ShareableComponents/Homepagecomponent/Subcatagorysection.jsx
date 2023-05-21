@@ -8,7 +8,7 @@ const Subcatagorysection = () => {
     const [toys, setToys] = useState(null);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/alltoys").then(res=> res.json())
+        fetch("https://playcarzone-server.vercel.app/alltoys").then(res=> res.json())
         .then(data=> setToys(data));
     },[])
 
