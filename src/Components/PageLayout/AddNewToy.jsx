@@ -20,6 +20,15 @@ const AddNewToy = () => {
         const selleremail = user.email; 
         const object = {name,price,thumbnail,description,rating,catagory,quantity,sellername,selleremail};
 
+        if(!name || !price || !thumbnail || !description || rating || catagory || quantity || sellername || selleremail){
+            return Swal.fire({
+                icon: 'error',
+                title: 'Empty',
+                text: 'Must put your all Document!',
+              })
+              return;
+        }
+
         fetch("http://localhost:5000/inserttoy",{
                 method: "POST",
                 headers: {
