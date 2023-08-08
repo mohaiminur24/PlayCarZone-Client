@@ -5,6 +5,7 @@ import Subcatagorysection from '../ShareableComponents/Homepagecomponent/Subcata
 import PageTitle from '../PageTitle';
 import Discountsection from '../ShareableComponents/Homepagecomponent/Discountsection';
 import Contactinfo from '../ShareableComponents/Homepagecomponent/Contactinfo';
+import PopularBrand from '../ShareableComponents/Homepagecomponent/PopularBrand';
 
 const HomePage = () => {
     
@@ -16,6 +17,7 @@ const HomePage = () => {
             <Subcatagorysection/>
             <Discountsection/>
             <Contactinfo/>  
+            <PopularBrand/>
         </div>
     );
 };
